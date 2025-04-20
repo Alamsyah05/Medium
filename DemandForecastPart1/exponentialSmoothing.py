@@ -35,6 +35,7 @@ for day in range(2, t + 1):
     # Actual demand of the previous day
     D_t_minus_1 = df.loc[day - 1, "Demand"]
     y_t = alpha * D_t_minus_1 + (1 - alpha) * y_t_minus_1  # SES formula
+    print(y_t)
     y_t_minus_1 = y_t  # Update for next iteration
 
 # Print forecast for day 31
